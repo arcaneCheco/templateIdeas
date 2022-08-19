@@ -1,0 +1,36 @@
+{
+  "useCases": [
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed dui leo. Vestibulum vitae tincidunt dui. Pellentesque condimentum elit ligula, feugiat pharetra ligula ultricies quis. Proin non aliquam purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus."
+    },
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": ""
+    },
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": ""
+    }
+  ],
+  "protoTypes": [
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed dui leo. Vestibulum vitae tincidunt dui. Pellentesque condimentum elit ligula, feugiat pharetra ligula ultricies quis. Proin non aliquam purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus."
+    },
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": ""
+    },
+    {
+      "source": "https://activetheory.net/work",
+      "type": "Scroll-interaction",
+      "notes": ""
+    }
+  ]
+}

@@ -1,94 +1,92 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { createRef, useEffect, useState } from "react";
+import { Section } from "./Section";
+import data from "./data.json";
 
 export const App = () => {
+  const [containerProps, setContainerProps] = useState({
+    fullScreen: false,
+    offset: 0,
+  });
+
+  const [bgHeight, setBgHeight] = useState(window.innerHeight);
+
+  const sectionRef = createRef<HTMLDivElement>();
+
+  const updateBackground = () => {
+    const scrollHeight = sectionRef.current?.scrollHeight || 0;
+    const parent = sectionRef.current?.offsetParent as HTMLDivElement;
+    const offset = parent.offsetTop || 0;
+    setBgHeight(scrollHeight + offset + 40);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateBackground);
+    return () => window.removeEventListener("resize", updateBackground);
+  }, [updateBackground]);
+
+  useEffect(() => {
+    updateBackground();
+  }, [sectionRef.current, containerProps, containerProps.fullScreen]);
+
   return (
-    <AppContainer>
-      <Section id="useCases">
-        <Title>Use Cases:</Title>
-        <List>
-          <Card>
-            <Box>
-              <iframe
-                src="https://activetheory.net/work"
-                allowFullScreen={true}
-              ></iframe>
-            </Box>
-            <Box></Box>
-          </Card>
-          <Card>
-            <Box></Box>
-            <Box></Box>
-          </Card>
-          <Card>
-            <Box></Box>
-            <Box></Box>
-          </Card>
-        </List>
-      </Section>
-      <Section id="prototypes">
-        <Title>Prototypes:</Title>
-        <List>
-          <Card>
-            <Box></Box>
-            <Box></Box>
-          </Card>
-          <Card>
-            <Box></Box>
-            <Box></Box>
-          </Card>
-          <Card>
-            <Box></Box>
-            <Box></Box>
-          </Card>
-        </List>
-      </Section>
-    </AppContainer>
+    <>
+      <Background height={bgHeight} />
+      <AppContainer {...containerProps}>
+        <Section
+          ref={sectionRef}
+          updateAppContainer={setContainerProps}
+          colorScheme={{ primary: "#cfcfcf", secondary: "#1d1d1d" }}
+          title="Use Cases:"
+          data={data.useCases}
+        />
+        <Section
+          updateAppContainer={setContainerProps}
+          colorScheme={{ primary: "#1d1d1d", secondary: "#cfcfcf" }}
+          title="Prototypes:"
+          data={data.protoTypes}
+        />
+      </AppContainer>
+    </>
   );
 };
 
-const AppContainer = styled.div`
+const Background = styled.div<{ height?: number }>`
+  width: 100%;
+  background: #1d1d1d;
+  height: ${({ height }) => `${height}px`};
+  position: absolute;
+`;
+
+const AppContainer = styled.div<{ fullscreen?: boolean; offset: number }>`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5% 0;
-  gap: 50px;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 800px;
+  gap: 100px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid black;
+  padding-bottom: 5%;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 800px;
   overflow: hidden;
-`;
 
-const Section = styled.section`
-  width: 100%;
-`;
+  ${({ fullscreen, offset }) =>
+    fullscreen &&
+    css`
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      margin: 0;
+      height: 100%;
+      top: ${offset}px;
+    `}
 
-const Title = styled.div`
-  margin-bottom: 20px;
-  font-size: 40px;
-`;
-
-const List = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border: 1px solid red;
-  align-self: center;
-`;
-
-const Card = styled.div`
-  width: 100%;
-  display: flex;
-  height: 400px;
-  gap: 20px;
-  border: 1px solid green;
-`;
-
-const Box = styled.div`
-  width: 50%;
-  height: 100%;
-  border: 1px solid blue;
+  @media (max-width: 800px) {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 `;

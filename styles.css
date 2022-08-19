@@ -7,4 +7,9 @@
 body {
     height: 100vh;
     width: 100vw;
+    background-color: #cfcfcf;
+}
+
+.noScroll {
+    overflow: hidden;
 }
