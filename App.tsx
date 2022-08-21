@@ -5,7 +5,7 @@ import data from "./data.json";
 
 export const App = () => {
   const [containerProps, setContainerProps] = useState({
-    fullScreen: false,
+    fullscreen: false,
     offset: 0,
   });
 
@@ -27,7 +27,7 @@ export const App = () => {
 
   useEffect(() => {
     updateBackground();
-  }, [sectionRef.current, containerProps, containerProps.fullScreen]);
+  }, [sectionRef.current, containerProps, containerProps.fullscreen]);
 
   return (
     <>

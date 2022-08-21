@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Dispatch, SetStateAction } from "react";
 import styled, { css } from "styled-components";
 import { GiExpander } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa";
@@ -13,7 +13,9 @@ export const Card = ({
   source: string;
   type: string;
   notes: string;
-  updateAppContainer: any;
+  updateAppContainer: Dispatch<
+    SetStateAction<{ fullscreen: boolean; offset: number }>
+  >;
   colorScheme: { primary: string; secondary: string };
 }) => {
   const disablePageScroll = () => {

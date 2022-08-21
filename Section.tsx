@@ -1,9 +1,11 @@
-import { forwardRef, ForwardedRef, MutableRefObject } from "react";
+import { forwardRef, ForwardedRef, SetStateAction, Dispatch } from "react";
 import styled from "styled-components";
 import { Card } from "./Card";
 
 interface SectionProps {
-  updateAppContainer: any;
+  updateAppContainer: Dispatch<
+    SetStateAction<{ fullscreen: boolean; offset: number }>
+  >;
   colorScheme: { primary: string; secondary: string };
   title: string;
   data: Array<{ source: string; type: string; notes: string }>;
