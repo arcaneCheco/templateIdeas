@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, MutableRefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { GiExpander } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa";
@@ -30,7 +30,7 @@ export const Card = ({
   const [fullscreen, setFullscreen] = useState(false);
 
   const launchSite = () => {
-    iframe.current.src = source;
+    iframe.current && (iframe.current.src = source);
     setIsIdle(false);
   };
 
@@ -66,12 +66,21 @@ export const Card = ({
             {type}
           </InfoItem>
           <InfoItem>
-            <InfoItemHeader>Source:</InfoItemHeader>
-            {source}
+            <InfoItemHeader>
+              <SourceLink href={source} target="_blank">
+                Source &#128279;
+              </SourceLink>
+            </InfoItemHeader>
           </InfoItem>
           <InfoItem>
             <InfoItemHeader>Notes:</InfoItemHeader>
-            {notes}
+            <NotesWrapper>
+              {notes.split(/\r?\n|\r|\n/g).map((line, i) => (
+                <Note key={(i + Math.random().toFixed(3)).toString()}>
+                  {line}
+                </Note>
+              ))}
+            </NotesWrapper>
           </InfoItem>
         </InfoWrapper>
       </Box>
@@ -107,6 +116,18 @@ const InfoItem = styled.li`
   margin: 10px 0;
 `;
 
+const SourceLink = styled.a`
+  pointer-events: all;
+  text-decoration: none;
+  color: inherit;
+`;
+
+const NotesWrapper = styled.ul`
+  padding-left: 15px;
+`;
+
+const Note = styled.li``;
+
 const PlayOverlay = styled(FaPlay)<{ color: string }>`
   position: absolute;
   width: auto;
@@ -131,6 +152,7 @@ const ToggleFullscreen = styled(GiExpander)`
   z-index: 2;
   pointer-events: all;
   cursor: pointer;
+  background: #12121244;
 `;
 
 const Box = styled.div<{ fullscreen?: boolean; color: string; color2: string }>`

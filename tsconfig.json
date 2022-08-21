@@ -3,6 +3,9 @@
     "jsx": "react-jsx",
     "module": "commonjs",
     "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true,
     "resolveJsonModule": true,
     "esModuleInterop": true
   }

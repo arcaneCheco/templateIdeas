@@ -1,36 +1,96 @@
 {
   "useCases": [
     {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
-      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed dui leo. Vestibulum vitae tincidunt dui. Pellentesque condimentum elit ligula, feugiat pharetra ligula ultricies quis. Proin non aliquam purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus."
+      "source": "https://bit.ly/3Kc8ks1",
+      "type": "Transition",
+      "notes": "Easily customizable => https://gl-transitions.com/gallery"
     },
     {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
+      "source": "https://bit.ly/3A53Dvu",
+      "type": "Gallery and Transition",
       "notes": ""
     },
     {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
+      "source": "https://bit.ly/3pvcFNL",
+      "type": "Image gallery and slider",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3dzcnm3",
+      "type": "Image gallery",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3PzMfEV",
+      "type": "Parallax, Gallery, 3D",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3Aef4RR",
+      "type": "Image Gallery, scroll trigger",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3wly6o2",
+      "type": "Infinite Scroll",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3CmzwTk",
+      "type": "Scroll trigger",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3T6aDAZ",
+      "type": "3D, navigation",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3Ac4Dy7",
+      "type": "Map navigation",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3QVePSZ",
+      "type": "merge HTML and WebGL",
+      "notes": "Embed regular mark-up within 3D assets.\n I bet you can create a lot fun adds with this appraoch like Eugene suggeted."
+    },
+    {
+      "source": "https://bit.ly/3PENAdC",
+      "type": "Landing Page",
+      "notes": "Similar to the loci.ai site.\nStraightforward to generate a set of templates, similar to the demo.\nProvide option to create a mesh or pointcloud from an image or model."
+    },
+    {
+      "source": "https://bit.ly/3QyjB8B",
+      "type": "Gif, noise, landing page",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3QXbv9b",
+      "type": "Product Page",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3PEzpW9",
+      "type": "Product Page",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3ccAZ3Q",
+      "type": "Micro interaction, cursor",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3ALFnjX",
+      "type": "Parallax, background",
       "notes": ""
     }
   ],
   "protoTypes": [
     {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
+      "source": "",
+      "type": "",
       "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed dui leo. Vestibulum vitae tincidunt dui. Pellentesque condimentum elit ligula, feugiat pharetra ligula ultricies quis. Proin non aliquam purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus."
-    },
-    {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
-      "notes": ""
-    },
-    {
-      "source": "https://activetheory.net/work",
-      "type": "Scroll-interaction",
-      "notes": ""
     }
   ]
 }
