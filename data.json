@@ -21,11 +21,6 @@
       "notes": ""
     },
     {
-      "source": "https://bit.ly/3PzMfEV",
-      "type": "Parallax, Gallery, 3D",
-      "notes": ""
-    },
-    {
       "source": "https://bit.ly/3Aef4RR",
       "type": "Image Gallery, scroll trigger",
       "notes": ""
@@ -38,6 +33,11 @@
     {
       "source": "https://bit.ly/3CmzwTk",
       "type": "Scroll trigger",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3PzMfEV",
+      "type": "Parallax, Gallery, 3D",
       "notes": ""
     },
     {
@@ -83,6 +83,11 @@
     {
       "source": "https://bit.ly/3ALFnjX",
       "type": "Parallax, background",
+      "notes": ""
+    },
+    {
+      "source": "https://bit.ly/3wmknNI",
+      "type": "Single Page, parallax",
       "notes": ""
     }
   ],
